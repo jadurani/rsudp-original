@@ -121,7 +121,7 @@ class Testing(rs.ConsumerThread):
 			t.TEST['x_IMGPATH'][1] = True
 
 	def _img_test(self):
-		if (t.TEST['c_img'] and IMGPATH):
+		if ('c_img' in t.TEST and t.TEST['c_img'] and IMGPATH):
 			t.TEST['c_img'][1] = os.path.exists(IMGPATH)
 			dn, fn = os.path.dirname(IMGPATH), os.path.basename(IMGPATH)
 			os.replace(IMGPATH, os.path.join(dn, 'test.' + fn))
