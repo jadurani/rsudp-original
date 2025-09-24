@@ -163,7 +163,7 @@ def cancel_tests(settings, MPL, plot, quiet):
 	else:
 		settings['plot']['enabled'] = False
 		del TEST['d_matplotlib']
-		del TEST['c_IMGPATH']
+		del TEST['x_IMGPATH']
 		del TEST['c_img']
 		printM('Plot is disabled')
 
@@ -248,3 +248,4 @@ def is_connected(hostname):
 	except:
 		pass
 	return False
+
